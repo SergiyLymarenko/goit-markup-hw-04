@@ -116,10 +116,14 @@ body {
   position: relative;
 }
 
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #404bbf;
+}
+
 .navigation-link:hover::after,
 .navigation-link:focus::after {
   content: "";
-  color: #404bbf;
   position: absolute;
   left: 0;
   bottom: -1px;
@@ -139,6 +143,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   list-style-type: none;
+}
+
+.navigation-item:hover::after {
+  content: "";
+  color: #404bbf;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 48px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background-color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts {
@@ -227,7 +245,7 @@ body {
 .baner-button:hover,
 .baner-button:focus {
   background-color: #404bbf;
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section 2: Features */
@@ -343,11 +361,12 @@ body {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 8px 0;
 }
 
-.madis-list {
-  gap: 24px;
+.media-list {
   display: flex;
+  gap: 24px;
   justify-content: center;
 }
 
@@ -418,6 +437,12 @@ body {
 .portfolio-item {
   background-color: #ffffff;
   width: calc((100% - 2 * 24px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item:nth-child(n + 4) {
