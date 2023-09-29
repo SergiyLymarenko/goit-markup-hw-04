@@ -129,6 +129,20 @@ body {
   list-style-type: none;
 }
 
+.navigation-item:hover::after,
+.navigation-item:focus::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: #404bbf;
+  position: absolute;
+  /* top: 0;
+  right: 0; */
+  bottom: 0;
+}
+
 .contacts {
   font-style: normal;
   gap: 40px;
