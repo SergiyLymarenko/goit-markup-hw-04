@@ -457,7 +457,7 @@ body {
   border: none;
 }
 
-.portfolio-img-item {
+.portfolio-img-item:hover {
 }
 
 .portfolio-box {
@@ -512,6 +512,9 @@ body {
 .footer-container {
   display: flex;
   align-items: baseline;
+}
+
+.footer-container-info {
   margin-right: 120px;
 }
 
